@@ -43,7 +43,7 @@ function resolveOptions(chart, options) {
 	// and the mouse goes over a chart you don't want it intercepted unless the plugin is enabled
 	var node = props._node;
 	var zoomEnabled = options.zoom && options.zoom.enabled;
-	var dragEnabled = options.zoom.drag;
+	var dragEnabled = options.zoom && options.zoom.drag;
 	if (zoomEnabled && !dragEnabled) {
 		node.addEventListener('wheel', props._wheelHandler);
 	} else {
